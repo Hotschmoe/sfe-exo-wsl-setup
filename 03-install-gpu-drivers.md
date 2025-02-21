@@ -1,16 +1,13 @@
 fn install nvidia drivers
 ```bash
-cd
-cd exo
-source venv/bin/activate
-exo
+# verify with ```nvidia-smi```
+# see references/nvidia-cuda-install-guide.md
+# see references/cuDNN-install.md
+# see references/cuDNN-verify.md
 ```
 
 STRETCH GOAL: ADD AMD DRIVERS (NOT FOR MVP)
 fn install amd drivers
-```bash
-cd
-cd exo
-source venv/bin/activate
-exo
-```
+<!-- ```bash
+# AMD driver install commands
+``` -->

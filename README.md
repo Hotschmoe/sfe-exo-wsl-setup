@@ -22,10 +22,11 @@ A complete one-shot-it.ps1 that accomplishes our goal.
 The script needs to enable features in windows necessary for WSL. Install WSL if it's not installed. Create a WSL user if first time running. (If this is not possible tell user to install and setup WSL before continuing). Script needs to install cuda drivers and toolkits required for exo-explore. It needs to clone exo-explore repo and install it. Needs to run exo-explore 
 
 Warning:
-User must have poweshell open as admin
-VmSwitch is deprecated so we need to forward exo-explore ports from windows to the WSL (see attached working IP forward test)
-we need to prompt the user for password when WSL requires it (sudo commands)
-script should handle edges cases where WSL is not enabled/installed, when multiple distros are installed, etc
+- User must have poweshell open as admin
+- VmSwitch is deprecated so we need to forward exo-explore ports from windows to the WSL (see attached working IP forward test)
+- we need to prompt the user for password when WSL requires it (sudo commands)
+- script should handle edges cases where WSL is not enabled/installed, when multiple distros are installed, etc
+- we should ONLY be using ubuntu through WSL (if other distros are installed, we should ignore them)
 
 Context:
 We have multiple windows PCs with Nvidia graphics cards that are mostly idle. We need to keep windows running for drafters when they come in so we'd like to utilize WSL to give us access to the GPU VRAM while they're idle to pool together and run some LLM models locally. It has become cumbersome to do the setup and install on each machine so we'd like have a foolproof script to run and setup any new machine we build or have come into the office. If we get this working in a robust way we'd love to share it with the community so any windows PC users can contribute to the exo/exo-explore ecosystem! See below for what I have currently mostly working.
